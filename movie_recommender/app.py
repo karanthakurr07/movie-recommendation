@@ -11,6 +11,10 @@ import math
 app = Flask(__name__)
 DB_PATH = "movies.db"
 
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 
 #  Database helper
 def get_db():
